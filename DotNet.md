@@ -15,3 +15,6 @@
 * DetailsView控件是一个数据绑定控件，一次只能显示一条记录，很多操作与GridView相似。
 * 通过设置`AllowPaging="true"`可以以分页的形式显示多个数据。
 * SqlDataSource中有一个属性**FilterExpression**和**FilterParameters**，可以缓存数据，减少从数据库服务器多次存取大量数据。
+
+#ClientScript以编程方式添加JavaScript
+**page.ClientScript.RegisterStartupScript**是把脚本放在**form**的末尾，而**不是body的末尾**。
