@@ -1,3 +1,9 @@
+
+# DBNull类
+DBNull类表示数据库中的NULL字段表示的对象，可以通过DBNull.Value.Equals(object)来判断字段是否为空，其它方法包括 Visual Basic 的 IsDBNull 函数、Convert.IsDBNull 方法、DataTableReader.IsDBNull 方法和 IDataRecord.IsDBNull 方法。
+
+Eval("column_name")返回值的数据类型是System.Object。在将Eval("column_name")作为参数时，需要判断数据库字段是否为NULL。
+
 #SELECT语句的从句和执行顺序
 ##SELECT语句
 ```sql
