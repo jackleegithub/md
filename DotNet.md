@@ -1,4 +1,7 @@
-##GridView控件
+#Repeater控件
+##CType(e.item.dataitem,**datatype**).item("id")
+由于Repeater控件的DataSource属性可以接受任何System.Collections.IEnumerable对象，例如用于访问数据库的System.Data.DataView、System.Collections.ArrayList、System.Collections.Hashtable、数组或IListSource对象，所以在操作DataItem的转型时，首先要弄清楚数据源的类型。如果是把DataTable.DefaultView作为数据源，那么DataItem转型的类型就是DataRowView；如果是把DataReader作为数据源，那么DataItem转型的类型就是System.Data.Common.DbDataRecord。这种转型通常发生在Repeater控件的DataItemBound处理事件中。
+#GridView控件
 ##GridView配置QueryString的值
 添加asp:HyperLinkFiled控件，设置DataTextFiled或DataNavigateUrlFields 属性获取数据字段,DataTextField 只能设置为单个数据字段。但 DataNavigateUrlFields 可以设置为一个逗号分隔的数据字段列表。我们经常需要将文本或 URL 赋值为当前行中数据字段值和某个静态标记的组合。
 
