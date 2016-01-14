@@ -1,3 +1,8 @@
+#SqlDataSource
+##Inserting Event Handle
+这个事件在调用Insert（）方法之前发生，调用Insert()方法之后发生Inserted事件。这个事件有一个SqlDataSourceCommandEventArgs类型的传入参数e。
+* 控制参数的数值：e.Command.Parameters("@pmName").Value = pmValue
+* 
 #Repeater控件
 ##CType(e.item.dataitem,**datatype**).item("id")
 由于Repeater控件的DataSource属性可以接受任何System.Collections.IEnumerable对象，例如用于访问数据库的System.Data.DataView、System.Collections.ArrayList、System.Collections.Hashtable、数组或IListSource对象，所以在操作DataItem的转型时，首先要弄清楚数据源的类型。如果是把DataTable.DefaultView作为数据源，那么DataItem转型的类型就是DataRowView；如果是把DataReader作为数据源，那么DataItem转型的类型就是System.Data.Common.DbDataRecord。这种转型通常发生在Repeater控件的DataItemBound处理事件中。
