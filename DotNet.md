@@ -1,3 +1,6 @@
+#ASP.NET编译
+`aspnet_compiler -v / -p phypath targpath`
+
 #SqlDataSource
 ##Inserting Event Handle
 这个事件在调用Insert（）方法之前发生，调用Insert()方法之后发生Inserted事件。这个事件有一个SqlDataSourceCommandEventArgs类型的传入参数e。
