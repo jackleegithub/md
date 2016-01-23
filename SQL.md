@@ -1,4 +1,11 @@
 
+#表的名称分类
+|名称|说明|
+|:---|:---|
+|工作表|普通的表，存储在用户数据库中，是关系型数据库的主要对象。|
+|临时表|* 可以创建全局临时表和本地临时表，全局临时表所有回话都可见，有两个#，本地临时表只在当前会话中可见，表名有一个#。CREATE TABLE #temp_table_name，存储在tempdb数据库中。除非使用DROP TABLE显示删除临时表，否则临时表在推出其作用域时由系统自动删除。建议使用表变量而不是临时表，表变量更有效的查询处理。临时表用在显示创建索引，或者多个存储过程或函数使用表值时，临时表才更有效。|
+|table变量|table 变量的行为类似于局部变量，有明确定义的作用域。这就是在其中声明该变量的函数、存储过程或批处理。在存储过程中使用 table 变量与使用临时表相比，减少了存储过程的重新编译量。DELCARE @tb TABLE ( { column_definition | table_constraint } [ ,...n ] ) |
+|派生表|派生表是结果集，用作查询的源。|
 # DBNull类
 DBNull类表示数据库中的NULL字段表示的对象，可以通过DBNull.Value.Equals(object)来判断字段是否为空，其它方法包括 Visual Basic 的 IsDBNull 函数、Convert.IsDBNull 方法、DataTableReader.IsDBNull 方法和 IDataRecord.IsDBNull 方法。
 
